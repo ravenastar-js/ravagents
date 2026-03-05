@@ -1,3 +1,8 @@
+
+<div align="center">
+
+<img src="assets/img/icon.png" alt="Social Media ID Cheatsheet" width="220" style="margin-bottom: 20px;"/>
+
 # 🕵️ RavAgents
 
 > Coleção de agentes investigativos para LLMs — prompts estruturados para fact-checking, OSINT e combate à desinformação  
@@ -12,6 +17,10 @@
 Os agentes não executam código — eles são instruções precisas que guiam modelos de linguagem a conduzir investigações replicáveis, céticas e baseadas exclusivamente em fontes verificáveis.
 
 Feito para pesquisadores, jornalistas, profissionais de segurança da informação, usuários técnicos e a comunidade open source em geral.
+
+[![➜ ​ ​TOON](https://img.shields.io/badge/➜%20%20toon-gray.svg)](https://toonformat.dev/) 
+
+</div>
 
 ---
 
@@ -35,10 +44,10 @@ Feito para pesquisadores, jornalistas, profissionais de segurança da informaç�
 
 Cada pasta de agente contém:
 
-| Arquivo | Descrição |
-|---|---|
-| `README.md` | Documentação completa do agente, funcionalidades e como usar |
-| `prompt.txt` | Prompt em formato texto convencional — cole em qualquer LLM |
+| Arquivo       | Descrição                                                                          |
+| ------------- | ---------------------------------------------------------------------------------- |
+| `README.md`   | Documentação completa do agente, funcionalidades e como usar                       |
+| `prompt.txt`  | Prompt em formato texto convencional — cole em qualquer LLM                        |
 | `prompt.toon` | Prompt em formato TOON (Token-Oriented Object Notation) — estruturado e versionado |
 
 ---
@@ -46,7 +55,7 @@ Cada pasta de agente contém:
 ## 🤖 Agentes disponíveis
 
 <details>
-<summary>🔵 <strong><a href="./agents/winprobe-agent/">winprobe-agent</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</summary>
+<summary>🔵 <strong><a href="agents/winprobe-agent/">winprobe-agent</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</summary>
 
 <br>
 
@@ -65,7 +74,7 @@ Agente especializado em investigar desinformação técnica sobre Windows e prod
 ---
 
 <details>
-<summary>🟣 <strong><a href="./agents/invosint/">invosint</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</summary>
+<summary>🟣 <strong><a href="agents/invosint/">invosint</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</summary>
 
 <br>
 
@@ -159,6 +168,26 @@ Respeite a legislação vigente, incluindo a **LGPD (Lei nº 13.709/2018)** e os
 Distribuído sob a licença **MIT**. Consulte o arquivo [`LICENSE`](./LICENSE) para mais detalhes.
 
 A licença MIT permite uso, cópia, modificação e distribuição livre, inclusive para fins comerciais, desde que o aviso de copyright e a licença sejam mantidos. Os avisos legais específicos de cada agente são parte integrante do projeto e devem ser preservados em todas as versões derivadas.
+
+---
+
+## 📞 Suporte 
+
+Se precisar de ajuda ou quiser falar com a equipe, entre no nosso servidor de suporte:
+
+[![Servidor de Suporte](https://img.shields.io/badge/Servidor%20de%20Suporte-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/FncVNprdgP)
+
+---
+
+## 🌟 Star History
+
+<a href="https://www.star-history.com/?repos=ravenastar-js%2Fravagents&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&legend=top-left" />
+ </picture>
+</a>
 
 ---
 

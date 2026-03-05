@@ -31,6 +31,7 @@ Feito para pesquisadores, jornalistas, profissionais de segurança da informaç�
 ├── 📄 README.md                        ← você está aqui
 ├── 📜 LICENSE
 └── 🗂️ agents/
+    ├── 📄 README.md                  ← Listagem dos Agentes
     ├── 🔵 winprobe-agent/              ← fake news Windows/Microsoft
     │   ├── 📄 README.md
     │   ├── 📝 prompt.txt

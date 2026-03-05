@@ -27,7 +27,7 @@ Feito para pesquisadores, jornalistas, profissionais de segurança da informaç�
 ## 📁 Estrutura do repositório
 
 ```
-📦 ravagents/
+📁 ravagents/
 ├── 📄 README.md                        ← você está aqui
 ├── 📜 LICENSE
 └── 🗂️ agents/

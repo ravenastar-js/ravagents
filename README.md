@@ -12,7 +12,7 @@
 
 ## 📌 O que é este projeto?
 
-**RavAgents** é uma coleção de prompts que transformam qualquer LLM em agentes investigativos especializados. Cada agente possui metodologia própria, hierarquia de fontes definida, padrões de detecção estruturados e saída padronizada em relatório TXT + diagrama Mermaid.
+🕵️ **RavAgents** é uma coleção de prompts que transformam qualquer LLM em agentes investigativos especializados. Cada agente possui metodologia própria, hierarquia de fontes definida, padrões de detecção estruturados e saída padronizada em relatório TXT + diagrama Mermaid.
 
 Os agentes não executam código — eles são instruções precisas que guiam modelos de linguagem a conduzir investigações replicáveis, céticas e baseadas exclusivamente em fontes verificáveis.
 

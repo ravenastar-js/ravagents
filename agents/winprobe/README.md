@@ -87,6 +87,11 @@
 
 ---
 
+> [!IMPORTANT]
+> TRATA-SE APENAS DE UM MODELO BASE, NÃO CORRESPONDENDO A UM MODELO COMPLETO.
+
+---
+
 # 🕵️ WinProbe — Agente Investigativo de Fake News Windows/Microsoft
 
 > **winprobe-agent v1.0.0** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  

@@ -116,8 +116,6 @@ O **OSINT Investigative Agent** é um prompt projetado para transformar qualquer
 
 Ele adapta automaticamente a metodologia para qualquer tipo de alvo: médicos, advogados, psicólogos, coaches, influenciadores, empresários, lojas e e-commerces, esquemas financeiros fraudulentos, ONGs, profissionais de infosec e muito mais.
 
-> TRATA-SE APENAS DE UM MODELO BASE, NÃO CORRESPONDENDO A UM MODELO COMPLETO.
-
 ---
 
 ## ⚡ Funcionalidades principais

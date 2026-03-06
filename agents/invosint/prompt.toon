@@ -349,17 +349,27 @@ report:
     consistency_check: nós e arestas DEVEM refletir apenas dados confirmados em S1-S7
     hallucination_policy: FORBIDDEN — proibido nó sem correspondência em S1-S7
 
+    # ── REGRAS DE SINTAXE MERMAID ──────────────────────────────
+    # CRÍTICO — quebras de linha em rótulos de nós:
+    #   ✅ CORRETO:   usar <br/> dentro de strings de rótulo
+    #   ❌ PROIBIDO:  usar \n — não é interpretado pelo parser Mermaid
+    #
+    # Pipes | dentro de labels entre aspas não causam conflito.
+    # Emojis são suportados em labels desde que o arquivo
+    # seja salvo em UTF-8.
+    # ────────────────────────────────────────────────────────────
+
     nodes_required[10]:
-      N-TARGET,   "🎯 $name\n$handle",                                        shape: stadium
-      N-IDENTITY, "📜 Identidade\nauto_detect.category | registration",        shape: rect
-      N-PLATFORMS,"🌐 Plataformas\nauto_detect.platforms",                     shape: rect
-      N-CLAIMS,   "⚖️ Claims\nbio_claimed | titles_claimed",                   shape: rect
-      N-CONTACTS, "☎️ Contatos\nemail | phone | website",                      shape: rect
-      N-DORKS,    "🔎 Dorks\nfraud | identity | academic",                     shape: rect
-      N-REDFLAGS, "🚩 Red Flags\nRF-XX ATIVA ou AUSENTE",                      shape: hexagon
-      N-OPSEC,    "🛡️ OPSEC\nlegítimo / suspeito",                             shape: rect
-      N-HISTORY,  "🕰️ Histórico Web\nWayback | min: 2010",                     shape: rect
-      N-VERDICT,  "✅ Veredito\nconfidence_level | recomendação",               shape: double_circle
+      N-TARGET,   "🎯 $name<br/>$handle",                                              shape: stadium
+      N-IDENTITY, "📜 Identidade<br/>auto_detect.category | registration",              shape: rect
+      N-PLATFORMS,"🌐 Plataformas<br/>auto_detect.platforms",                           shape: rect
+      N-CLAIMS,   "⚖️ Claims<br/>bio_claimed | titles_claimed",                         shape: rect
+      N-CONTACTS, "☎️ Contatos<br/>email | phone | website",                            shape: rect
+      N-DORKS,    "🔎 Dorks<br/>fraud | identity | academic",                           shape: rect
+      N-REDFLAGS, "🚩 Red Flags<br/>RF-XX ATIVA ou AUSENTE",                            shape: hexagon
+      N-OPSEC,    "🛡️ OPSEC<br/>legítimo / suspeito",                                   shape: rect
+      N-HISTORY,  "🕰️ Histórico Web<br/>Wayback | min: 2010",                           shape: rect
+      N-VERDICT,  "✅ Veredito<br/>confidence_level | recomendação",                    shape: double_circle
 
     edges_required[11]{from,to,label}:
       N-TARGET   -> N-IDENTITY,  "verificar"
@@ -384,18 +394,18 @@ report:
       default: fill:#1c1c2e,color:#c0c0c0,stroke:#444
 
     mermaid_template: |
-```mermaid
+      ```mermaid
       flowchart TD
-          TARGET(["🎯 $name\n$handle"])
-          IDENTITY["📜 Identidade\n{category} | {registration}"]
-          PLATFORMS["🌐 Plataformas\n{platforms}"]
-          CLAIMS["⚖️ Claims\n{bio_claimed_short}"]
-          CONTACTS["☎️ Contatos\n{email} | {phone}"]
-          DORKS["🔎 Google Dorks\nfraud · identity · academic"]
-          REDFLAGS{{"🚩 Red Flags\n{rf_summary}"}}
-          OPSEC["🛡️ OPSEC\n{opsec_status}"]
-          HISTORY["🕰️ Histórico Web\nWayback ≥ 2010"]
-          VERDICT(("✅ Veredito\n{confidence_level}"))
+          TARGET(["🎯 $name<br/>$handle"])
+          IDENTITY["📜 Identidade<br/>{category} | {registration}"]
+          PLATFORMS["🌐 Plataformas<br/>{platforms}"]
+          CLAIMS["⚖️ Claims<br/>{bio_claimed_short}"]
+          CONTACTS["☎️ Contatos<br/>{email} | {phone}"]
+          DORKS["🔎 Google Dorks<br/>fraud · identity · academic"]
+          REDFLAGS{{"🚩 Red Flags<br/>{rf_summary}"}}
+          OPSEC["🛡️ OPSEC<br/>{opsec_status}"]
+          HISTORY["🕰️ Histórico Web<br/>Wayback ≥ 2010"]
+          VERDICT(("✅ Veredito<br/>{confidence_level}"))
 
           TARGET --> IDENTITY
           TARGET --> PLATFORMS
@@ -409,10 +419,10 @@ report:
           OPSEC --> VERDICT
           HISTORY --> VERDICT
 
-          style TARGET fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
-          style VERDICT fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
+          style TARGET   fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
+          style VERDICT  fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
           style REDFLAGS fill:#0d1f2d,color:#e0e0e0,stroke:#00b0ff
-```
+      ```
 
   delivery:
     after: sections S1-S7 completas
@@ -515,7 +525,6 @@ meta:
   toon_spec: https://github.com/toon-format/toon
   benchmark_case: $slug
   created: 2026
-  changelog: "v1.0.0 — adicionados: loja_ecommerce category, scam_store_analysis, pyramid_scheme_analysis, RF-11, RF-12, torpeza bilateral, vetores AV-05 ao AV-13 (IDN Homograph, E-mail Spoofing, BEC, Quishing, Sim Swapping, Deepfake, Zero-width, Punycode), auto_detect.domain_age, auto_detect.comments_status"
   investigation_subject: $name
   investigation_handle: $handle
   investigation_date: $date

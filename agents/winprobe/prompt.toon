@@ -610,14 +610,8 @@ report:
     #   ✅ CORRETO:   usar <br/> dentro de strings de rótulo
     #   ❌ PROIBIDO:  usar \n — não é interpretado pelo parser Mermaid
     #
-    # Formas de nó — notação de colchetes Mermaid:
-    #   rect         →  NODE["rótulo"]          colchetes duplos
-    #   stadium      →  NODE(["rótulo"])         parêntese + colchete
-    #   hexagon      →  NODE{{"rótulo"}}         chaves duplas
-    #   double_circle→  NODE(("rótulo"))         parênteses duplos
-    #
-    # Pipes | dentro de rótulos entre aspas não causam conflito.
-    # Emojis são suportados em rótulos desde que o arquivo
+    # Pipes | dentro de labels entre aspas não causam conflito.
+    # Emojis são suportados em labels desde que o arquivo
     # seja salvo em UTF-8.
     # ────────────────────────────────────────────────────────────
 

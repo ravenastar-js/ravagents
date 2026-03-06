@@ -704,13 +704,7 @@ REGRAS OBRIGATÓRIAS DE SINTAXE MERMAID:
      ✅ CORRETO:   usar <br/> dentro de strings de rótulo
      ❌ PROIBIDO:  usar \n — não é interpretado pelo parser Mermaid
 
-  2. FORMAS DE NÓS — notação de colchetes:
-     Retângulo padrão  →  NODE["rótulo"]
-     Stadium / pill    →  NODE(["rótulo"])
-     Hexágono          →  NODE{{"rótulo"}}
-     Círculo duplo     →  NODE(("rótulo"))
-
-  3. PIPES E EMOJIS
+  2. PIPES E EMOJIS
      Pipes | dentro de rótulos entre aspas não causam conflito.
      Emojis são suportados em rótulos — salvar arquivo em UTF-8.
 

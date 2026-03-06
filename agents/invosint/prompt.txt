@@ -451,7 +451,7 @@ Cabeçalho:
   🕵️  RELATÓRIO OSINT — [NOME] ([HANDLE])
   📅 Data da Investigação: [DATA ISO-8601]
   🔗 Alvo: [LINKS]
-  ⚙️  Gerado por: osint-agent-br v1.0.0
+  ⚙️  Gerado por: osint-agent-br v1.1.0
 ================================================================
 
 Corpo com as seguintes seções em ordem, emoji + título em
@@ -504,17 +504,22 @@ GitHub README, GitHub Gist e mermaid.live.
 Usar flowchart TD. Nós e arestas devem refletir apenas dados
 confirmados nas seções 1 a 7. Proibido nó sem correspondência.
 
-Estrutura obrigatória de nós:
-TARGET    = 🎯 [NOME] / [HANDLE]             (shape: stadium)
-IDENTITY  = 📜 Identidade / categoria e registro  (shape: rect)
-PLATFORMS = 🌐 Plataformas / lista detectada      (shape: rect)
-CLAIMS    = ⚖️ Claims / bio + títulos             (shape: rect)
-CONTACTS  = ☎️ Contatos / email · phone · site    (shape: rect)
-DORKS     = 🔎 Google Dorks / fraud·identity·acad (shape: rect)
-REDFLAGS  = 🚩 Red Flags / resumo RF ativas       (shape: hexagon)
-OPSEC     = 🛡️ OPSEC / legítimo ou suspeito       (shape: rect)
-HISTORY   = 🕰️ Histórico Web / Wayback ≥ 2010     (shape: rect)
-VERDICT   = ✅ Veredito / confidence_level         (shape: double_circle)
+⚠️ SINTAXE OBRIGATÓRIA DE QUEBRA DE LINHA EM NÓS MERMAID:
+— Use SEMPRE <br/> para quebras de linha dentro de labels de nós.
+— NUNCA use \n — o parser Mermaid não suporta \n dentro de labels
+  e isso causa erro de renderização no GitHub, Gist e mermaid.live.
+
+Estrutura obrigatória de nós (use <br/> para quebras de linha):
+TARGET    = ["🎯 [NOME]<br/>[HANDLE]"]                         (shape: stadium  → TARGET([" "]))
+IDENTITY  = ["📜 Identidade<br/>categoria | registro"]         (shape: rect     → IDENTITY[" "])
+PLATFORMS = ["🌐 Plataformas<br/>lista detectada"]             (shape: rect     → PLATFORMS[" "])
+CLAIMS    = ["⚖️ Claims<br/>bio + títulos"]                    (shape: rect     → CLAIMS[" "])
+CONTACTS  = ["☎️ Contatos<br/>email · phone · site"]           (shape: rect     → CONTACTS[" "])
+DORKS     = ["🔎 Google Dorks<br/>fraud · identity · acad"]   (shape: rect     → DORKS[" "])
+REDFLAGS  = {{"🚩 Red Flags<br/>resumo RF ativas"}}            (shape: hexagon  → REDFLAGS{{" "}})
+OPSEC     = ["🛡️ OPSEC<br/>legítimo ou suspeito"]              (shape: rect     → OPSEC[" "])
+HISTORY   = ["🕰️ Histórico Web<br/>Wayback ≥ 2010"]           (shape: rect     → HISTORY[" "])
+VERDICT   = (("✅ Veredito<br/>confidence_level"))             (shape: double_circle → VERDICT((" ")))
 
 Arestas obrigatórias:
 TARGET    --> IDENTITY    : verificar
@@ -540,6 +545,39 @@ Se OPSEC legítimo:
   style OPSEC fill:#0d2b1e,color:#e0e0e0,stroke:#00e676
 Se OPSEC suspeito:
   style OPSEC fill:#2b1a0d,color:#e0e0e0,stroke:#ff6d00
+
+Exemplo de diagrama preenchido corretamente (use como referência):
+
+``` mermaid
+flowchart TD
+    TARGET(["🎯 Nome do Alvo<br/>@handle"])
+    IDENTITY["📜 Identidade<br/>categoria | registro"]
+    PLATFORMS["🌐 Plataformas<br/>Instagram · LinkedIn"]
+    CLAIMS["⚖️ Claims<br/>bio declarada | títulos"]
+    CONTACTS["☎️ Contatos<br/>email@dominio.com | site.com.br"]
+    DORKS["🔎 Google Dorks<br/>fraud · identity · academic"]
+    REDFLAGS{{"🚩 Red Flags<br/>RF-XX ATIVA ou AUSENTE"}}
+    OPSEC["🛡️ OPSEC<br/>legítimo / suspeito"]
+    HISTORY["🕰️ Histórico Web<br/>Wayback ≥ 2010"]
+    VERDICT(("✅ Veredito<br/>ALTO / MÉDIO / BAIXO"))
+
+    TARGET --> IDENTITY
+    TARGET --> PLATFORMS
+    TARGET --> CLAIMS
+    IDENTITY --> REDFLAGS
+    CLAIMS --> REDFLAGS
+    PLATFORMS --> CONTACTS
+    CONTACTS --> DORKS
+    DORKS --> HISTORY
+    REDFLAGS --> OPSEC
+    OPSEC --> VERDICT
+    HISTORY --> VERDICT
+
+    style TARGET   fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
+    style VERDICT  fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
+    style REDFLAGS fill:#0d1f2d,color:#e0e0e0,stroke:#00b0ff
+    style OPSEC    fill:#0d2b1e,color:#e0e0e0,stroke:#00e676
+```
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📖 PERFIS DE REFERÊNCIA VERIFICADOS — use como benchmark

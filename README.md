@@ -78,13 +78,16 @@ Novos agentes serão adicionados progressivamente. Se você tem uma ideia de age
 
 **4. Cole em qualquer LLM compatível:**
 
-- [Grok](https://grok.com/) — Expert / SuperGrok
+- [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
 - [ChatGPT](https://chat.openai.com)
 - [Gemini](https://gemini.google.com)
 - [Copilot](https://copilot.microsoft.com)
 - [DeepSeek](https://chat.deepseek.com/)
 - [ArenaAI](https://arena.ai/)
+
+> [!NOTE]
+> Recomenda-se a utilização dos modos *Expert* e *DeepThink*, bem como do raciocínio estendido das LLMs, a fim de produzir um relatório abrangente, consistente e de máxima precisão.
 
 **5. Receba o relatório** completo com todas as seções obrigatórias, matriz de red flags, arquivo `.txt` forense e diagrama Mermaid exportável.
 

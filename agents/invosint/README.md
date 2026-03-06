@@ -265,13 +265,16 @@ Links conhecidos:             SUBSTITUIR
 
 O prompt foi testado e é compatível com:
 
-- [Grok](https://grok.com/) — Expert / Grok 4.20 Beta / SuperGrok
+- [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
 - [ChatGPT](https://chat.openai.com)
 - [Gemini](https://gemini.google.com)
 - [Copilot](https://copilot.microsoft.com)
 - [DeepSeek](https://chat.deepseek.com/)
 - [ArenaAI](https://arena.ai/)
+
+> [!NOTE]
+> Recomenda-se a utilização dos modos *Expert* e *DeepThink*, bem como do raciocínio estendido das LLMs, a fim de produzir um relatório abrangente, consistente e de máxima precisão.
 
 ### 4. Receba o relatório
 

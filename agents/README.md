@@ -7,7 +7,7 @@
 ## 🤖 Agentes disponíveis
 
 <details>
-<summary>🟣 <strong><a href="winprobe/">winprobe-agent</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</summary>
+<summary>🟣 <strong><a href="winprobe/">winprobe-agent</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</summary>
 
 <br>
 
@@ -26,7 +26,7 @@ Agente especializado em investigar desinformação técnica sobre Windows e prod
 ---
 
 <details>
-<summary>🔵 <strong><a href="invosint/">invosint</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</summary>
+<summary>🔵 <strong><a href="invosint/">invosint</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</summary>
 
 <br>
 

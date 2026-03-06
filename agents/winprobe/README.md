@@ -175,29 +175,29 @@ Se a notícia investigada promover ou se basear em alguma dessas práticas, o ag
 
 | ID | Prática desaconselhada | Fonte |
 |---|---|---|
-| NR-01 | Desativar Inicialização Rápida para "aumentar vida útil do PC" | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-inicializacao-rapida-nao-aumenta-a-vida-util-do-pc/) |
-| NR-02 | Chave de Registro para aumentar VRAM | [baboo.com.br](https://www.baboo.com.br/desinformacao/chave-do-registro-nao-aumenta-a-quantidade-de-vram/) |
-| NR-03 | Clonar PC sem Sysprep | [baboo.com.br](https://www.baboo.com.br/desinformacao/clonar-um-pc-sem-usar-sysprep-e-perigoso/) |
-| NR-04 | Liberar cache L2/L3 para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/pare-de-acreditar-no-mito-de-liberar-cache-l2-e-l3/) |
-| NR-05 | ReFS vai substituir NTFS em partições de boot | [baboo.com.br](https://www.baboo.com.br/desinformacao/refs-nao-substituira-particoes-ntfs/) |
-| NR-06 | Scripts de debloat para deixar o Windows mais rápido | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
-| NR-07 | Desativar serviços do Windows para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-servicos-nao-deixa-o-windows-mais-rapido/) |
-| NR-08 | Desativar o Windows Update | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-windows-update-indica-irresponsabilidade/) |
-| NR-09 | Desativar o UAC | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-uac-controle-de-conta-do-usuario-e-irresponsabilidade/) |
-| NR-10 | Programas de limpeza de Registro (CCleaner e similares) | [baboo.com.br](https://www.baboo.com.br/desinformacao/otimizar-limpar-o-registro-nao-deixa-o-windows-mais-rapido/) |
-| NR-11 | Programas de limpeza de memória RAM | [baboo.com.br](https://www.baboo.com.br/desinformacao/programa-que-limpa-a-memoria-ram-deve-ser-evitado/) |
-| NR-12 | Desativar a telemetria para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-telemetria-nao-deixa-o-windows-mais-rapido/) |
-| NR-13 | Desativar a Proteção do Sistema (pontos de restauração) | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-protecao-do-sistema-nao-deixa-o-windows-mais-rapido/) |
-| NR-14 | Desativar aplicativos nativos do Windows | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
-| NR-15 | Desativar hibernação para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desabilitar-a-hibernacao-nao-deixa-o-windows-mais-rapido/) |
-| NR-16 | Desativar o WinSAT | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-winsat-nao-deixa-o-windows-mais-rapido/) |
-| NR-17 | Opções Avançadas do MSCONFIG para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/opcoes-avancadas-do-msconfig-nao-melhoram-desempenho-do-windows/) |
-| NR-18 | Truque para usar 100% da velocidade da internet | [baboo.com.br](https://www.baboo.com.br/desinformacao/como-liberar-100-de-velocidade-da-sua-internet-e-pura-desinformacao/) |
-| NR-19 | Limpeza completa do Windows sem reinstalação | [baboo.com.br](https://www.baboo.com.br/desinformacao/nao-existe-limpeza-completa-no-windows/) |
-| NR-20 | Backup do Windows na mesma unidade | [baboo.com.br](https://www.baboo.com.br/desinformacao/nao-faca-backup-do-windows-na-mesma-unidade-de-disco/) |
-| NR-21 | Programas de instalação de drivers de terceiros | [baboo.com.br](https://www.baboo.com.br/desinformacao/programas-de-instalacao-de-drivers-devem-ser-evitados/) |
-| NR-22 | Comparativos de antivírus em sites não independentes | [baboo.com.br](https://www.baboo.com.br/ultimas/cuidado-com-artigos-e-analise-de-antivirus/) |
-| NR-23 | Exageros sobre bugs do Windows em portais de tecnologia | [baboo.com.br](https://www.baboo.com.br/desinformacao/desmistificando-exageros-sobre-bugs-do-windows/) |
+| NR-01 | Desativar Inicialização Rápida para "aumentar vida útil do PC" | [🔗 NR-01](https://www.baboo.com.br/desinformacao/desativar-a-inicializacao-rapida-nao-aumenta-a-vida-util-do-pc/) |
+| NR-02 | Chave de Registro para aumentar VRAM | [🔗 NR-02](https://www.baboo.com.br/desinformacao/chave-do-registro-nao-aumenta-a-quantidade-de-vram/) |
+| NR-03 | Clonar PC sem Sysprep | [🔗 NR-03](https://www.baboo.com.br/desinformacao/clonar-um-pc-sem-usar-sysprep-e-perigoso/) |
+| NR-04 | Liberar cache L2/L3 para melhorar desempenho | [🔗 NR-04](https://www.baboo.com.br/desinformacao/pare-de-acreditar-no-mito-de-liberar-cache-l2-e-l3/) |
+| NR-05 | ReFS vai substituir NTFS em partições de boot | [🔗 NR-05](https://www.baboo.com.br/desinformacao/refs-nao-substituira-particoes-ntfs/) |
+| NR-06 | Scripts de debloat para deixar o Windows mais rápido | [🔗 NR-06](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
+| NR-07 | Desativar serviços do Windows para melhorar desempenho | [🔗 NR-07](https://www.baboo.com.br/desinformacao/desativar-servicos-nao-deixa-o-windows-mais-rapido/) |
+| NR-08 | Desativar o Windows Update | [🔗 NR-08](https://www.baboo.com.br/desinformacao/desativar-o-windows-update-indica-irresponsabilidade/) |
+| NR-09 | Desativar o UAC | [🔗 NR-09](https://www.baboo.com.br/desinformacao/desativar-o-uac-controle-de-conta-do-usuario-e-irresponsabilidade/) |
+| NR-10 | Programas de limpeza de Registro (CCleaner e similares) | [🔗 NR-10](https://www.baboo.com.br/desinformacao/otimizar-limpar-o-registro-nao-deixa-o-windows-mais-rapido/) |
+| NR-11 | Programas de limpeza de memória RAM | [🔗 NR-11](https://www.baboo.com.br/desinformacao/programa-que-limpa-a-memoria-ram-deve-ser-evitado/) |
+| NR-12 | Desativar a telemetria para melhorar desempenho | [🔗 NR-12](https://www.baboo.com.br/desinformacao/desativar-a-telemetria-nao-deixa-o-windows-mais-rapido/) |
+| NR-13 | Desativar a Proteção do Sistema (pontos de restauração) | [🔗 NR-13](https://www.baboo.com.br/desinformacao/desativar-a-protecao-do-sistema-nao-deixa-o-windows-mais-rapido/) |
+| NR-14 | Desativar aplicativos nativos do Windows | [🔗 NR-14](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
+| NR-15 | Desativar hibernação para melhorar desempenho | [🔗 NR-15](https://www.baboo.com.br/desinformacao/desabilitar-a-hibernacao-nao-deixa-o-windows-mais-rapido/) |
+| NR-16 | Desativar o WinSAT | [🔗 NR-16](https://www.baboo.com.br/desinformacao/desativar-o-winsat-nao-deixa-o-windows-mais-rapido/) |
+| NR-17 | Opções Avançadas do MSCONFIG para melhorar desempenho | [🔗 NR-17](https://www.baboo.com.br/desinformacao/opcoes-avancadas-do-msconfig-nao-melhoram-desempenho-do-windows/) |
+| NR-18 | Truque para usar 100% da velocidade da internet | [🔗 NR-18](https://www.baboo.com.br/desinformacao/como-liberar-100-de-velocidade-da-sua-internet-e-pura-desinformacao/) |
+| NR-19 | Limpeza completa do Windows sem reinstalação | [🔗 NR-19](https://www.baboo.com.br/desinformacao/nao-existe-limpeza-completa-no-windows/) |
+| NR-20 | Backup do Windows na mesma unidade | [🔗 NR-20](https://www.baboo.com.br/desinformacao/nao-faca-backup-do-windows-na-mesma-unidade-de-disco/) |
+| NR-21 | Programas de instalação de drivers de terceiros | [🔗 NR-21](https://www.baboo.com.br/desinformacao/programas-de-instalacao-de-drivers-devem-ser-evitados/) |
+| NR-22 | Comparativos de antivírus em sites não independentes | [🔗 NR-22](https://www.baboo.com.br/ultimas/cuidado-com-artigos-e-analise-de-antivirus/) |
+| NR-23 | Exageros sobre bugs do Windows em portais de tecnologia | [🔗 NR-23](https://www.baboo.com.br/desinformacao/desmistificando-exageros-sobre-bugs-do-windows/) |
 
 > Esta seção é baseada exclusivamente em orientações públicas verificáveis do MVP Aurélio Minerbo (Baboo). Cada entrada possui URL de referência. O catálogo pode ser expandido conforme novos artigos de desinformação forem publicados.
 

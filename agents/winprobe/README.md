@@ -112,7 +112,7 @@ Ele cruza sistematicamente cada claim com fontes oficiais da Microsoft, posicion
 | Capacidade | Descrição |
 |---|---|
 | 🏛️ Verificação oficial MS | Consulta ao Windows Release Health, KB pages, MSRC e Microsoft Answers |
-| 👥 Cruzamento com MVPs | Verificação do posicionamento de Baboo (Aurélio Minerbo) e outros especialistas |
+| 👥 Cruzamento com MVPs | Verificação do posicionamento de Aurélio "Baboo" e outros especialistas |
 | 🔗 Rastreamento de origem | Identifica o relato primário e distingue caso isolado de problema global |
 | ⚠️ Padrões de desinformação | 8 padrões categorizados (FN-01 a FN-08) com critérios de identificação |
 | 🚩 Detecção de red flags | 12 categorias de alertas com severidade e evidência |
@@ -169,7 +169,7 @@ Cada red flag é reportado no formato:
 
 ## 🚫 Práticas não recomendadas — baseadas nas orientações do MVP Aurélio Baboo
 
-O agente cruza cada claim investigado com um catálogo de **23 práticas tecnicamente incorretas, ineficazes ou perigosas** para o Windows, baseado nas orientações públicas do MVP Aurélio Minerbo (Baboo) em [baboo.com.br/desinformacao](https://www.baboo.com.br/desinformacao/), LinkedIn, Instagram, YouTube e fóruns.
+O agente cruza cada claim investigado com um catálogo de **23 práticas tecnicamente incorretas, ineficazes ou perigosas** para o Windows, baseado nas orientações públicas do MVP Aurélio "Baboo" em [baboo.com.br/desinformacao](https://www.baboo.com.br/desinformacao/), LinkedIn, Instagram, YouTube e fóruns.
 
 Se a notícia investigada promover ou se basear em alguma dessas práticas, o agente aciona automaticamente **RF-12 com severidade ALTA**.
 
@@ -199,7 +199,7 @@ Se a notícia investigada promover ou se basear em alguma dessas práticas, o ag
 | NR-22 | Comparativos de antivírus em sites não independentes | [🔗 NR-22](https://www.baboo.com.br/ultimas/cuidado-com-artigos-e-analise-de-antivirus/) |
 | NR-23 | Exageros sobre bugs do Windows em portais de tecnologia | [🔗 NR-23](https://www.baboo.com.br/desinformacao/desmistificando-exageros-sobre-bugs-do-windows/) |
 
-> Esta seção é baseada exclusivamente em orientações públicas verificáveis do MVP Aurélio Minerbo (Baboo). Cada entrada possui URL de referência. O catálogo pode ser expandido conforme novos artigos de desinformação forem publicados.
+> Esta seção é baseada exclusivamente em orientações públicas verificáveis do MVP Aurélio "Baboo". Cada entrada possui URL de referência. O catálogo pode ser expandido conforme novos artigos de desinformação forem publicados.
 
 ---
 

@@ -93,7 +93,7 @@ primary_sources:
       "Verificar se há CVE ou comunicado de segurança associado à KB investigada."
 
   mvps_specialists[3]{name,channels[],procedure}:
-    Aurélio Minerbo ("Baboo") — MVP Microsoft,
+    Aurélio "Baboo" — MVP Microsoft,
       [
         https://pt.wikipedia.org/wiki/BABOO,
         https://www.baboo.com.br/,
@@ -236,7 +236,7 @@ monitored_profiles:
       [YouTube @williamazarado, Instagram, X],
       "Publicação de conteúdos sobre Windows com alegações técnicas não verificadas em fontes oficiais Microsoft, tratando casos isolados ou comportamentos esperados do sistema como falhas graves ou riscos generalizados.",
       "Múltiplas ocorrências — verificar histórico",
-      "Aurélio Minerbo (Baboo), MVP Microsoft",
+      "Aurélio 'Baboo', MVP Microsoft",
       [https://www.baboo.com.br/desinformacao/, https://www.instagram.com/baboo.com.br/, https://x.com/baboo_com_br],
       EM_MONITORAMENTO,
       "Verificar publicações recentes antes de usar qualquer claim deste perfil como referência. Cruzar obrigatoriamente com Windows Release Health e canais oficiais Microsoft."
@@ -244,7 +244,7 @@ monitored_profiles:
       [YouTube, Instagram],
       "Publicação de conteúdos sobre Windows com alegações técnicas sem verificação em fontes oficiais, com linguagem alarmista sobre atualizações e segurança do sistema.",
       "Múltiplas ocorrências — verificar histórico",
-      "Aurélio Minerbo (Baboo), MVP Microsoft",
+      "Aurélio 'Baboo', MVP Microsoft",
       [https://www.baboo.com.br/desinformacao/, https://www.instagram.com/baboo.com.br/, https://x.com/baboo_com_br],
       EM_MONITORAMENTO,
       "Verificar publicações recentes antes de usar qualquer claim deste perfil como referência. Cruzar obrigatoriamente com Windows Release Health e canais oficiais Microsoft."
@@ -252,7 +252,7 @@ monitored_profiles:
       [YouTube youtube.com/channel/UCddVa_i8yri-wNyomMMUiXg, Site canalbpv.com],
       "Publicação de conteúdos sobre Windows com alegações técnicas sem verificação em fontes oficiais, tratando comportamentos normais do sistema ou casos isolados como problemas generalizados e críticos.",
       "Múltiplas ocorrências — verificar histórico",
-      "Aurélio Minerbo (Baboo), MVP Microsoft",
+      "Aurélio 'Baboo', MVP Microsoft",
       [https://www.baboo.com.br/desinformacao/, https://www.instagram.com/baboo.com.br/, https://x.com/baboo_com_br],
       EM_MONITORAMENTO,
       "Verificar publicações recentes antes de usar qualquer claim deste perfil como referência. Cruzar obrigatoriamente com Windows Release Health e canais oficiais Microsoft."
@@ -272,10 +272,10 @@ monitored_profiles:
 # NÃO RECOMENDADO — práticas desaconselhadas por MVP Microsoft
 # ─────────────────────────────────────────────
 not_recommended:
-  $desc: Catálogo de práticas amplamente divulgadas na internet que são tecnicamente incorretas, ineficazes ou perigosas para o Windows. Baseado nas orientações públicas do MVP Aurélio Minerbo (Baboo) publicadas em baboo.com.br/desinformacao, LinkedIn, Instagram, YouTube e fóruns. Se a notícia investigada promove ou é baseada em alguma dessas práticas, acionar automaticamente RF-12 com severidade ALTA.
+  $desc: Catálogo de práticas amplamente divulgadas na internet que são tecnicamente incorretas, ineficazes ou perigosas para o Windows. Baseado nas orientações públicas do MVP Aurélio 'Baboo' publicadas em baboo.com.br/desinformacao, LinkedIn, Instagram, YouTube e fóruns. Se a notícia investigada promove ou é baseada em alguma dessas práticas, acionar automaticamente RF-12 com severidade ALTA.
 
   source_authority:
-    name:   "Aurélio Minerbo (Baboo)"
+    name:   "Aurélio 'Baboo'"
     role:   "MVP Microsoft"
     hub:    https://www.baboo.com.br/desinformacao/
     social: [https://www.linkedin.com/in/aurelio-baboo/, https://x.com/baboo_com_br, https://www.instagram.com/baboo.com.br/]

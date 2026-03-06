@@ -15,7 +15,7 @@ Agente especializado em investigar desinformação técnica sobre Windows e prod
 
 **Destaques:**
 - Consulta obrigatória ao Windows Release Health e páginas oficiais de KB
-- Cruzamento com MVPs Microsoft verificados (Baboo / Aurélio Minerbo)
+- Cruzamento com MVPs Microsoft verificados (Aurélio "Baboo")
 - 8 padrões de desinformação categorizados (FN-01 a FN-08)
 - 11 red flags com severidade e evidência
 - Lista de perfis com histórico de alegações não verificadas

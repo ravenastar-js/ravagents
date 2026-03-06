@@ -98,7 +98,7 @@ oficial da KB no support.microsoft.com e verifique:
 👥 ESPECIALISTAS E MVPs VERIFICADOS — consulte como referência
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Aurélio Minerbo ("Baboo") — MVP Microsoft, referência em
+Aurélio "Baboo" — MVP Microsoft, referência em
 desinformação sobre Windows. Verificar posicionamento nos canais:
 — Wikipedia: https://pt.wikipedia.org/wiki/BABOO
 — Site: https://www.baboo.com.br/
@@ -295,7 +295,7 @@ CLAIM        : Publicação de conteúdos sobre Windows com
                ou comportamentos esperados do sistema como
                falhas graves ou riscos generalizados.
 DATA APROX   : Múltiplas ocorrências — verificar histórico
-REFUTADO POR : Aurélio Minerbo (Baboo), MVP Microsoft
+REFUTADO POR : Aurélio "Baboo", MVP Microsoft
 FONTE DO     :
 DESMENTIDO   : https://www.baboo.com.br/desinformacao/
                https://www.instagram.com/baboo.com.br/
@@ -315,7 +315,7 @@ CLAIM        : Publicação de conteúdos sobre Windows com
                oficiais, com linguagem alarmista sobre
                atualizações e segurança do sistema.
 DATA APROX   : Múltiplas ocorrências — verificar histórico
-REFUTADO POR : Aurélio Minerbo (Baboo), MVP Microsoft
+REFUTADO POR : Aurélio "Baboo", MVP Microsoft
 FONTE DO     :
 DESMENTIDO   : https://www.baboo.com.br/desinformacao/
                https://www.instagram.com/baboo.com.br/
@@ -337,7 +337,7 @@ CLAIM        : Publicação de conteúdos sobre Windows com
                sistema ou casos isolados como problemas
                generalizados e críticos.
 DATA APROX   : Múltiplas ocorrências — verificar histórico
-REFUTADO POR : Aurélio Minerbo (Baboo), MVP Microsoft
+REFUTADO POR : Aurélio "Baboo", MVP Microsoft
 FONTE DO     :
 DESMENTIDO   : https://www.baboo.com.br/desinformacao/
                https://www.instagram.com/baboo.com.br/
@@ -373,7 +373,7 @@ Sem esses três elementos, o perfil não deve ser incluído.
 AVISO: Esta seção cataloga práticas amplamente divulgadas na
 internet que são tecnicamente incorretas, ineficazes ou
 perigosas para o Windows. Baseada nas orientações públicas do
-MVP Aurélio Minerbo (Baboo) em baboo.com.br/desinformacao,
+MVP Aurélio "Baboo" em baboo.com.br/desinformacao,
 LinkedIn, Instagram, YouTube e fóruns. Fonte de referência:
 https://www.baboo.com.br/desinformacao/
 
@@ -792,7 +792,7 @@ Status: CONFIRMADO OFICIALMENTE | INVESTIGAÇÃO EM CURSO |
 NÃO LISTADO | LISTADO COMO RESOLVIDO ANTES DA PUBLICAÇÃO.
 
 👥 5. POSICIONAMENTO DE MVPs E ESPECIALISTAS VERIFICADOS
-O que Baboo (Aurélio Minerbo) publicou ou comentou sobre o tema,
+O que Aurélio "Baboo" publicou ou comentou sobre o tema,
 se aplicável. Outros MVPs ou especialistas técnicos verificados
 que se posicionaram. Resultado da busca em baboo.com.br/desinformacao.
 

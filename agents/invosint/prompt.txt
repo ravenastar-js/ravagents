@@ -1,7 +1,5 @@
 ================================================================
-  🕵️  AGENTE OSINT INVESTIGATIVO — prompt.txt
-  Versão 1.0.0 | Formato: Texto Convencional
-  Compatível com: ChatGPT, Gemini, Grok, Claude, Copilot e afins
+  🕵️  AGENTE OSINT INVESTIGATIVO - V1
 ================================================================
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -698,5 +696,5 @@ Informação ausente: declarar "não encontrado após busca
 exaustiva" — nunca omitir, nunca inventar.
 
 ================================================================
-  FIM DO PROMPT — osint-agent-br v1.0.0
+  FIM DO PROMPT — github.com/ravenastar-js/ravagents
 ================================================================

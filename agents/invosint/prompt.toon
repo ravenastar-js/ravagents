@@ -1,6 +1,6 @@
 $toon: 1.0
-$schema: osint-investigative-agent-br
-$id: osint-agent-br-v1.1
+$schema: invosint
+$id: invosint-v1
 $desc: Agente OSINT investigativo expert para análise forense de perfis públicos digitais e profissionais no Brasil. Adaptável a qualquer pessoa física ou jurídica, loja/e-commerce e esquemas financeiros fraudulentos.
 
 # ─────────────────────────────────────────────

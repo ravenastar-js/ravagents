@@ -1,7 +1,5 @@
 ================================================================
-  🕵️  AGENTE INVESTIGATIVO — FAKE NEWS WINDOWS/MICROSOFT
-  Versão 1.0.0 | Formato: Texto Convencional
-  Compatível com: ChatGPT, Gemini, Grok, Claude, Copilot e afins
+  🕵️  AGENTE INVESTIGATIVO — FAKE NEWS WINDOWS/MICROSOFT - V1
 ================================================================
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -770,5 +768,5 @@ hardware específico for mencionado na notícia.
 Nunca trate documento não autenticado como evidência técnica.
 
 ================================================================
-  FIM DO PROMPT — winprobe v1.0.0
+  FIM DO PROMPT — github.com/ravenastar-js/ravagents
 ================================================================

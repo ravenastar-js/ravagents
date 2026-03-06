@@ -146,7 +146,7 @@ Se a notícia cita como evidência um documento descrito como
 Aurélio "Baboo" — MVP Microsoft, referência em desinformação
 sobre Windows.
 
-VERIFICAÇÃO OBRIGATÓRIA EM TODOS OS CANAIS (ATUALIZADO v1.0.0):
+VERIFICAÇÃO OBRIGATÓRIA EM TODOS OS CANAIS:
 Não basta verificar apenas o site baboo.com.br. O agente DEVE
 buscar em todos os canais abaixo, inclusive Instagram e X.
 Desmentidos ativos de Baboo são frequentemente publicados
@@ -171,7 +171,7 @@ PRIMEIRO nas redes sociais, antes de aparecerem no site.
     DORK: site:x.com "baboo_com_br" "[KB]"
 — Facebook: https://www.facebook.com/baboo.com.br
 
-PROCEDIMENTO ATUALIZADO:
+PROCEDIMENTO:
 Um MVP desmentindo ativamente uma notícia em qualquer canal é
 evidência forte de fake news ou sensacionalismo. O desmentido
 deve ser tratado como RF-07 com severidade mínima ALTA. Se o
@@ -229,7 +229,7 @@ site:learn.microsoft.com "status-windows-11" "[PROBLEMA]"
 site:techcommunity.microsoft.com "[KB]" "[PROBLEMA]"
 site:answers.microsoft.com "[KB]"
 
-GRUPO D2 — verificação em especialistas e MVPs (AMPLIADO v1.0.0):
+GRUPO D2 — verificação em especialistas e MVPs:
 site:baboo.com.br "[KB]" OR "[PROBLEMA]"
 site:baboo.com.br "desinformacao"
 site:instagram.com "baboo.com.br" "[KB]"
@@ -357,7 +357,7 @@ Antes de usar qualquer portal como evidência, classifique-o:
 
 NÍVEL 1 — OFICIAL: Microsoft Support, Windows Release Health,
 Microsoft Learn, MSRC, Microsoft Tech Community, Microsoft Blog.
-ATUALIZADO v1.0.0: Sites oficiais de fabricantes de hardware
+Sites oficiais de fabricantes de hardware
 (phison.com, samsung.com/semiconductor, seagate.com, etc.)
 para claims relacionados aos seus próprios produtos também
 são Nível 1.
@@ -374,8 +374,8 @@ portais de notícias gerais sem expertise técnica, canais do
 YouTube sem credenciais verificáveis, blogs pessoais anônimos.
 Perfis listados na seção de histórico de alegações não
 verificadas se enquadram automaticamente neste nível.
-ATUALIZADO v1.0.0: Documentos "vazados", "internos" ou
-"confidenciais" não autenticados pelo emitente também são
+Documentos "vazados", "internos" ou "confidenciais"
+não autenticados pelo emitente também são
 Nível 4 e inadmissíveis como evidência central.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -524,8 +524,7 @@ RF-04 Meia-verdade com contexto omitido deliberadamente
 RF-05 Efeito manada entre portais sem verificação independente
 RF-06 Título sensacionalista contradizendo o próprio corpo
 RF-07 MVP ou especialista verificado desmentiu ativamente
-      ATUALIZADO v1.0.0: verificar em TODOS os canais do MVP,
-      incluindo Instagram. Desmentido ativo em qualquer canal
+      Desmentido ativo em qualquer canal
       = severidade mínima ALTA. Desmentido em múltiplos canais
       com evidência técnica detalhada = severidade CRÍTICA.
 RF-08 A Microsoft listou o problema como "resolvido" antes
@@ -687,7 +686,6 @@ ARTEFATO 1 — RELATÓRIO TXT
 Nome sugerido: winprobe-[KB]-[DATA].txt
 ─────────────────────────────────────────────
 
-[Estrutura idêntica à v1.0.0 com as adições:
 — Seção R5 inclui resultado de TODOS os canais de Baboo
   (Instagram e X obrigatoriamente) + fabricantes
 — Seção R7 inclui dorks do Grupo D8
@@ -709,8 +707,6 @@ LEAKEDDOC --> REDFLAGS : acionar RF-13 | RF-14 se aplicável
 
 Estilo adicional:
 style LEAKEDDOC fill:#1a1a0d,color:#e0e0e0,stroke:#ffd600
-
-[Demais estilos e estrutura idênticos à v1.0.0]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚙️  PARÂMETROS FINAIS

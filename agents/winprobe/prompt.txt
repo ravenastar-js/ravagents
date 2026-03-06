@@ -691,22 +691,74 @@ Nome sugerido: winprobe-[KB]-[DATA].txt
 — Seção R7 inclui dorks do Grupo D8
 — Seção R8 inclui FN-09 se identificado
 — Matriz R10 inclui RF-13 e RF-14
-— Seção R11 indica quais Regras de Escalada foram aplicadas]
+— Seção R11 indica quais Regras de Escalada foram aplicadas
 
 ─────────────────────────────────────────────
 ARTEFATO 2 — DIAGRAMA MERMAID
 Nome sugerido: winprobe-[KB]-[DATA].mmd
 ─────────────────────────────────────────────
 
-Adicionar nó N-LEAKEDDOC ao diagrama:
-LEAKEDDOC = 📄 Doc. Vazado / autenticidade + fabricante confirmou?
+REGRAS OBRIGATÓRIAS DE SINTAXE MERMAID:
 
-Arestas adicionais:
-ORIGIN   --> LEAKEDDOC : verificar documentos citados
-LEAKEDDOC --> REDFLAGS : acionar RF-13 | RF-14 se aplicável
+  1. QUEBRAS DE LINHA EM NÓS
+     ✅ CORRETO:   usar <br/> dentro de strings de rótulo
+     ❌ PROIBIDO:  usar \n — não é interpretado pelo parser Mermaid
 
-Estilo adicional:
-style LEAKEDDOC fill:#1a1a0d,color:#e0e0e0,stroke:#ffd600
+  2. FORMAS DE NÓS — notação de colchetes:
+     Retângulo padrão  →  NODE["rótulo"]
+     Stadium / pill    →  NODE(["rótulo"])
+     Hexágono          →  NODE{{"rótulo"}}
+     Círculo duplo     →  NODE(("rótulo"))
+
+  3. PIPES E EMOJIS
+     Pipes | dentro de rótulos entre aspas não causam conflito.
+     Emojis são suportados em rótulos — salvar arquivo em UTF-8.
+
+ESTRUTURA OBRIGATÓRIA DO DIAGRAMA:
+
+  Tipo: flowchart TD
+
+  Nós obrigatórios (usar <br/> para quebras de linha):
+    N-CLAIM      → 🎯 [KB]<br/>[título curto]             (shape: stadium)
+    N-ORIGIN     → 🔗 Origem<br/>[portais | autores]      (shape: rect)
+    N-MSOURCE    → 🏛️ Fontes MS<br/>Release Health | KB   (shape: rect)
+    N-MVPS       → 👥 MVPs<br/>Baboo | fabricantes        (shape: rect)
+    N-PATTERNS   → ⚠️ Padrões<br/>FN ativos               (shape: rect)
+    N-NOTRECOM   → 🚫 Não Recomendado<br/>NR ativos       (shape: rect)
+    N-REDFLAGS   → 🚩 Red Flags<br/>RF ativos ou AUSENTE  (shape: hexagon)
+    N-SCOPE      → 📊 Escopo<br/>caso isolado vs. global  (shape: rect)
+    N-PROFILES   → ⚠️ Perfis<br/>histórico alegações      (shape: rect)
+    N-LEAKEDDOC  → 📄 Doc. Vazado<br/>autenticidade |
+                   fabricante confirmou?                   (shape: rect)
+    N-VERDICT    → ✅ Veredicto<br/>classificação |
+                   confiança                              (shape: double_circle)
+
+  Arestas obrigatórias:
+    N-CLAIM      --> N-ORIGIN     : rastrear origem
+    N-CLAIM      --> N-MSOURCE    : verificar oficialmente
+    N-ORIGIN     --> N-PATTERNS   : identificar padrões
+    N-ORIGIN     --> N-PROFILES   : checar perfis monitorados
+    N-ORIGIN     --> N-LEAKEDDOC  : verificar documentos citados
+    N-MSOURCE    --> N-REDFLAGS   : cruzar com RF
+    N-MVPS       --> N-REDFLAGS   : posicionamento especialistas
+    N-MVPS       --> N-NOTRECOM   : práticas desaconselhadas
+    N-PATTERNS   --> N-SCOPE      : avaliar escopo real
+    N-PROFILES   --> N-REDFLAGS   : acionar RF-11 se aplicável
+    N-NOTRECOM   --> N-REDFLAGS   : acionar RF-12 se aplicável
+    N-LEAKEDDOC  --> N-REDFLAGS   : acionar RF-13 | RF-14 se aplicável
+    N-REDFLAGS   --> N-VERDICT    : evidências + escalada de veredicto
+    N-SCOPE      --> N-VERDICT    : conclusão
+
+  Estilos obrigatórios:
+    style N-CLAIM      fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
+    style N-VERDICT    fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
+    style N-PROFILES   fill:#2b1a0d,color:#e0e0e0,stroke:#ff6d00
+    style N-NOTRECOM   fill:#1a0d2b,color:#e0e0e0,stroke:#aa00ff
+    style N-LEAKEDDOC  fill:#1a1a0d,color:#e0e0e0,stroke:#ffd600
+    style N-REDFLAGS   fill:#3b0d0d,color:#e0e0e0,stroke:#ff1744
+    (se nenhum red flag ativo → stroke:#00b0ff, fill:#0d1f2d)
+    style padrão para demais nós:
+      fill:#1c1c2e,color:#c0c0c0,stroke:#444
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ⚙️  PARÂMETROS FINAIS

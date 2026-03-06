@@ -91,7 +91,7 @@
 >
 > ---
 >
-> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>osint-agent-br v1.0.0</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
+> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>invosint-v1</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
 >
 > </details>
 
@@ -104,7 +104,7 @@
 
 # 🕵️ OSINT Investigative Agent — BR
 
-> **osint-agent-br v1.0.0** · Agente de inteligência de fontes abertas para investigação de perfis públicos brasileiros
+> **invosint-v1** · Agente de inteligência de fontes abertas para investigação de perfis públicos brasileiros
 >
 > Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
@@ -365,7 +365,6 @@ O agente segue uma hierarquia rígida de confiabilidade:
 
 | Parâmetro | Valor |
 |---|---|
-| Versão | v1.0.0 |
 | Tom | Neutro · profissional · forense |
 | Ceticismo | Máximo — nunca aceita marketing próprio como fato |
 | Formatação de saída | Texto simples inline · emojis apenas em cabeçalhos |
@@ -393,5 +392,5 @@ O uso é de responsabilidade exclusiva de quem executa a investigação. Respeit
 ---
 
 <div align="center">
-  <sub>osint-agent-br v1.0.0 · Feito para investigadores, pesquisadores e profissionais de segurança</sub>
+  <sub>invosint-v1 · Feito para investigadores, pesquisadores e profissionais de segurança</sub>
 </div>

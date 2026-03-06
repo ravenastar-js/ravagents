@@ -81,7 +81,7 @@
 >
 > ---
 >
-> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>winprobe v1.0.0</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
+> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>winprobe V1</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
 >
 > </details>
 
@@ -94,7 +94,7 @@
 
 # 🕵️ WinProbe — Agente Investigativo de Fake News Windows/Microsoft
 
-> **winprobe v1.0.0** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  
+> **winprobe V1** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  
 > Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
 ---
@@ -417,5 +417,5 @@ O uso é de responsabilidade exclusiva de quem executa a investigação. Respeit
 ---
 
 <div align="center">
-  <sub>winprobe v1.0.0 · Feito para quem não aceita fake news técnica sobre Windows sem questionar</sub>
+  <sub>winprobe V1 · Feito para quem não aceita fake news técnica sobre Windows sem questionar</sub>
 </div>

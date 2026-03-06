@@ -55,10 +55,10 @@ Cada pasta de agente contém:
 
 ## 🤖 Agentes disponíveis
 
-<h3><strong><a href="agents/">▷ 📁 winprobe</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</h3>
+<h3><strong><a href="agents/">▷ 📁 winprobe</a></strong> <code>V1</code> — fake news Windows/Microsoft</h3>
 
 
-<h3><strong><a href="agents/">▷ 📁 invosint</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</h3>
+<h3><strong><a href="agents/">▷ 📁 invosint</a></strong> <code>V1</code> — investigação de perfis públicos BR</h3>
 
 ---
 

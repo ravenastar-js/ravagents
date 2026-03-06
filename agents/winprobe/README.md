@@ -81,7 +81,7 @@
 >
 > ---
 >
-> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>winprobe-agent v1.0.0</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
+> > <sub>Este <strong>"⚠️ AVISO IMPORTANTE"</strong> constitui parte integrante e indissociável do projeto <strong>winprobe v1.0.0</strong>. Sua reprodução integral é obrigatória em todas as versões derivadas, forks, redistribuições, adaptações e usos comerciais ou não comerciais deste material, sendo vedada qualquer alteração, supressão ou ocultação de seu conteúdo.</sub>
 >
 > </details>
 
@@ -94,7 +94,7 @@
 
 # 🕵️ WinProbe — Agente Investigativo de Fake News Windows/Microsoft
 
-> **winprobe-agent v1.0.0** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  
+> **winprobe v1.0.0** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  
 > Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
 ---
@@ -270,7 +270,7 @@ Documentos "vazados" não autenticados pelo emitente → nível 4 automático
 
 ---
 
-## 📊 Exemplo de diagrama de saída (v1.0.0)
+## 📊 Exemplo de diagrama de saída
 
 ```mermaid
 flowchart TD
@@ -417,5 +417,5 @@ O uso é de responsabilidade exclusiva de quem executa a investigação. Respeit
 ---
 
 <div align="center">
-  <sub>winprobe-agent v1.0.0 · Feito para quem não aceita fake news técnica sobre Windows sem questionar</sub>
+  <sub>winprobe v1.0.0 · Feito para quem não aceita fake news técnica sobre Windows sem questionar</sub>
 </div>

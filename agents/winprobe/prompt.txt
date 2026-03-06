@@ -724,5 +724,5 @@ hardware específico for mencionado na notícia.
 Nunca trate documento não autenticado como evidência técnica.
 
 ================================================================
-  FIM DO PROMPT — winprobe-agent v1.0.0
+  FIM DO PROMPT — winprobe v1.0.0
 ================================================================

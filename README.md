@@ -32,7 +32,7 @@ Feito para pesquisadores, jornalistas, profissionais de segurança da informaç�
 ├── 📜 LICENSE
 └── 🗂️ agents/
     ├── 📄 README.md                  ← Listagem dos Agentes
-    ├── 🔵 winprobe-agent/              ← fake news Windows/Microsoft
+    ├── 🔵 winprobe/              ← fake news Windows/Microsoft
     │   ├── 📄 README.md
     │   ├── 📝 prompt.txt
     │   └── 🧩 prompt.toon
@@ -55,7 +55,7 @@ Cada pasta de agente contém:
 
 ## 🤖 Agentes disponíveis
 
-<h3><strong><a href="agents/">▷ 📁 winprobe-agent</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</h3>
+<h3><strong><a href="agents/">▷ 📁 winprobe</a></strong> <code>v1.0.0</code> — fake news Windows/Microsoft</h3>
 
 
 <h3><strong><a href="agents/">▷ 📁 invosint</a></strong> <code>v1.0.0</code> — investigação de perfis públicos BR</h3>

@@ -1,6 +1,6 @@
 $toon: 1.0
-$schema: winprobe-agent
-$id: winprobe-agent-v1
+$schema: winprobe
+$id: winprobe-v1
 $desc: Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft. Verifica se notícias, artigos ou posts sobre bugs, falhas, vulnerabilidades ou comportamentos anômalos do Windows são verídicos, sensacionalistas, meia-verdade ou fake news completa.
 
 # ─────────────────────────────────────────────
@@ -563,7 +563,7 @@ report:
         line2: "  🕵️  RELATÓRIO FAKE NEWS WINDOWS — $kb | $title"
         line3: "  📅 Data da Investigação: $date"
         line4: "  🔗 Fontes investigadas: $urls"
-        line5: "  ⚙️  Gerado por: winprobe-agent v$meta.version"
+        line5: "  ⚙️  Gerado por: winprobe v$meta.version"
         line6: "================================================================"
 
       body_sections[12]{id,emoji,title,rule}:
@@ -645,7 +645,7 @@ meta:
   version: 1.0.0
   format: TOON — Token-Oriented Object Notation
   toon_spec: https://github.com/toon-format/toon
-  slug: winprobe-agent
+  slug: winprobe
   created: 2026
   investigation_subject: $title
   investigation_kb: $kb

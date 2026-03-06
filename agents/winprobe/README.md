@@ -103,7 +103,7 @@
 
 O **WinProbe** é um prompt projetado para transformar qualquer LLM em um investigador especializado em fake news técnicas sobre Windows. O agente verifica se uma notícia, artigo ou post sobre um suposto bug, falha, vulnerabilidade ou comportamento anômalo do Windows é **verídico**, **sensacionalista**, **meia-verdade** ou **fake news completa**.
 
-Ele cruza sistematicamente cada claim com fontes oficiais da Microsoft, posicionamento de MVPs verificados e padrões conhecidos de desinformação técnica — antes de emitir qualquer veredicto.
+Ele cruza sistematicamente cada claim com fontes oficiais da Microsoft, posicionamento de MVPs verificados em **todos os seus canais** (incluindo Instagram), sites oficiais de fabricantes de hardware, e verifica a autenticidade de documentos citados como "vazados" — antes de emitir qualquer veredicto.
 
 ---
 
@@ -112,21 +112,22 @@ Ele cruza sistematicamente cada claim com fontes oficiais da Microsoft, posicion
 | Capacidade | Descrição |
 |---|---|
 | 🏛️ Verificação oficial MS | Consulta ao Windows Release Health, KB pages, MSRC e Microsoft Answers |
-| 👥 Cruzamento com MVPs | Verificação do posicionamento de Aurélio "Baboo" e outros especialistas |
+| 🏭 Verificação de fabricantes | Sites oficiais de fabricantes consultados obrigatoriamente quando hardware é mencionado |
+| 👥 Cruzamento com MVPs | Verificação em TODOS os canais de Baboo: site, LinkedIn, **Instagram**, X, YouTube, Facebook |
 | 🔗 Rastreamento de origem | Identifica o relato primário e distingue caso isolado de problema global |
-| ⚠️ Padrões de desinformação | 8 padrões categorizados (FN-01 a FN-08) com critérios de identificação |
-| 🚩 Detecção de red flags | 12 categorias de alertas com severidade e evidência |
-| 🔎 Google Dorks sistematizados | Operadores avançados para verificação oficial, MVPs, escopo e portais |
-| ⚠️ Perfis monitorados | Lista de perfis com histórico de alegações não verificadas e desmentidas por MVPs |
-| 🚫 Práticas não recomendadas | 23 práticas desaconselhadas por MVP verificado com refutação técnica e fontes |
-| 🏷️ Classificação de portais | Níveis 1 a 4 de confiabilidade para cada fonte consultada |
+| 📄 Verificação de documentos | Autenticidade de documentos "vazados" verificada junto ao fabricante antes de usá-los como evidência |
+| ⚠️ Padrões de desinformação | 9 padrões categorizados (FN-01 a FN-09) com critérios de identificação |
+| 🚩 Detecção de red flags | 14 categorias de alertas com severidade e evidência |
+| 🔁 Escalada de veredicto | Regras explícitas: RF-07, RF-13 ou RF-14 ativos disparam escalada obrigatória |
+| 🔎 Google Dorks sistematizados | 8 grupos de operadores avançados (D1-D8) |
+| ⚠️ Perfis monitorados | Lista de perfis com histórico de alegações não verificadas |
+| 🚫 Práticas não recomendadas | 23 práticas desaconselhadas por MVP com refutação técnica |
+| 🏷️ Classificação de portais | Níveis 1 a 4 incluindo sites de fabricantes e documentos não autenticados |
 | 📊 Relatório estruturado | Saída em `.txt` forense + diagrama Mermaid exportável |
 
 ---
 
 ## ⚠️ Padrões de desinformação monitorados
-
-O agente identifica e classifica automaticamente os seguintes padrões:
 
 ```
 FN-01  Caso isolado tratado como problema global
@@ -137,13 +138,12 @@ FN-05  Fonte única não verificada como prova principal
 FN-06  Efeito manada de publicações sem verificação independente
 FN-07  Título sensacionalista contradizendo o próprio corpo do texto
 FN-08  Exploração de viés de confirmação anti-Windows
+FN-09  Documento falso ou não autenticado como prova técnica
 ```
 
 ---
 
 ## 🚩 Red Flags monitorados
-
-O agente identifica e classifica automaticamente os seguintes vetores de risco:
 
 ```
 RF-01  Claim sem fonte oficial Microsoft
@@ -158,18 +158,30 @@ RF-09  Known Issue oficial descreve impacto menor do que o noticiado
 RF-10  Hardware ou configuração do relato era atípica ou não aplicável
 RF-11  Fonte primária é perfil com histórico de alegações não verificadas
 RF-12  Notícia promove prática desaconselhada por MVP verificado (NR-XX)
+RF-13  Documento vazado não autenticado como evidência
+RF-14  Fabricante emitiu desmentido ou medidas legais
 ```
 
-Cada red flag é reportado no formato:
+---
+
+## 🔎 Grupos de Google Dorks
+
 ```
-[ID] [SEVERIDADE] [DATA APROX] [EVIDÊNCIA] [FONTE]
+D1  Verificação oficial Microsoft
+D2  Verificação em especialistas e MVPs (incl. Instagram e X)
+D3  Rastreamento de origem do claim
+D4  Verificação de escopo real — caso isolado vs. global
+D5  Rastreamento do relato original
+D6  Verificação de portais que publicaram a notícia
+D7  Verificação cruzada com perfis monitorados
+D8  Documentos vazados e notas de fabricantes
 ```
 
 ---
 
 ## 🚫 Práticas não recomendadas — baseadas nas orientações do MVP Aurélio Baboo
 
-O agente cruza cada claim investigado com um catálogo de **23 práticas tecnicamente incorretas, ineficazes ou perigosas** para o Windows, baseado nas orientações públicas do MVP Aurélio "Baboo" em [baboo.com.br/desinformacao](https://www.baboo.com.br/desinformacao/), LinkedIn, Instagram, YouTube e fóruns.
+O agente cruza cada claim investigado com um catálogo de **23 práticas tecnicamente incorretas, ineficazes ou perigosas** para o Windows, baseado nas orientações públicas do MVP Aurélio "Baboo" em [baboo.com.br/desinformacao](https://www.baboo.com.br/desinformacao/).
 
 Se a notícia investigada promover ou se basear em alguma dessas práticas, o agente aciona automaticamente **RF-12 com severidade ALTA**.
 
@@ -199,18 +211,16 @@ Se a notícia investigada promover ou se basear em alguma dessas práticas, o ag
 | NR-22 | Comparativos de antivírus em sites não independentes | [🔗 NR-22](https://www.baboo.com.br/ultimas/cuidado-com-artigos-e-analise-de-antivirus/) |
 | NR-23 | Exageros sobre bugs do Windows em portais de tecnologia | [🔗 NR-23](https://www.baboo.com.br/desinformacao/desmistificando-exageros-sobre-bugs-do-windows/) |
 
-> Esta seção é baseada exclusivamente em orientações públicas verificáveis do MVP Aurélio "Baboo". Cada entrada possui URL de referência. O catálogo pode ser expandido conforme novos artigos de desinformação forem publicados.
-
 ---
 
 ## 🏷️ Classificação de portais e perfis
-
-O agente classifica cada fonte consultada antes de usá-la como evidência:
 
 ```
 NÍVEL 1 — OFICIAL
 Microsoft Support · Windows Release Health · Microsoft Learn
 MSRC · Microsoft Tech Community · Microsoft Blog
+Sites oficiais de fabricantes de hardware (para claims sobre
+seus próprios produtos)
 
 NÍVEL 2 — TÉCNICO VERIFICADO
 BleepingComputer · Ars Technica · The Verge (tech) · ZDNet
@@ -219,23 +229,17 @@ TabNews · MVPs com histórico verificado
 NÍVEL 3 — TÉCNICO COM RESSALVAS
 Windows Latest · WindowsReport · How-To Geek · Adrenaline
 TechTudo · CanalTech · Clube do Hardware
-(Podem publicar sem verificação suficiente; usar com cautela.)
 
 NÍVEL 4 — BAIXA CONFIANÇA
 Posts de redes sociais sem respaldo · portais generalistas
-canais YouTube sem credenciais verificáveis · blogs anônimos
+Canais YouTube sem credenciais · blogs anônimos
 Perfis com histórico de alegações não verificadas → nível 4 automático
+Documentos "vazados" não autenticados pelo emitente → nível 4 automático
 ```
 
 ---
 
 ## ⚠️ Perfis com histórico de alegações não verificadas
-
-O agente mantém uma lista de perfis que publicaram claims técnicos sobre Windows sem verificação suficiente em fontes oficiais e que foram refutados por MVPs ou especialistas verificados.
-
-> Esta seção **não constitui acusação formal**. Cada entrada exige fonte citada do desmentido. Perfis desta lista são automaticamente classificados como Nível 4 e nunca usados como evidência de suporte a um claim técnico.
-
-**Entradas registradas na v1.0.0:**
 
 | Perfil | Plataformas | Status |
 |---|---|---|
@@ -243,34 +247,102 @@ O agente mantém uma lista de perfis que publicaram claims técnicos sobre Windo
 | Sayro Digital | YouTube, Instagram | EM MONITORAMENTO |
 | Canal BPV | YouTube, canalbpv.com | EM MONITORAMENTO |
 
-**Critérios para adição de novos perfis:**
-- URL do conteúdo original com o claim incorreto
-- URL do desmentido por MVP ou fonte oficial verificável
-- Data aproximada de ambos os registros
-
-Sem esses três elementos, o perfil não deve ser incluído.
-
 ---
 
 ## 🗂️ Estrutura da resposta gerada
 
-O agente produz uma resposta em **11 seções obrigatórias** + **2 artefatos exportáveis**:
-
 ```
 🔍  1. Identificação da Notícia e Origem do Claim
 🏷️  2. Classificação do(s) Portal(is) e Autor(es)
-🔗  3. Rastreamento da Fonte Primária
+🔗  3. Rastreamento da Fonte Primária (+ verificação de docs vazados)
 🏛️  4. Verificação nas Fontes Oficiais Microsoft
-👥  5. Posicionamento de MVPs e Especialistas Verificados
+👥  5. Posicionamento de MVPs (todos os canais) + Fabricantes
 ⚖️  6. Análise de Claims e Inconsistências
-☎️  7. Google Dorks Utilizados
-🕵️  8. Padrões de Desinformação Identificados
-🚫  9. Práticas Não Recomendadas Identificadas
-🚩 10. Red Flags Ativos
-✅ 11. Conclusão e Veredicto Final
+☎️  7. Google Dorks Utilizados (grupos D1-D8)
+🕵️  8. Padrões de Desinformação (FN-01 a FN-09)
+🚫  9. Práticas Não Recomendadas (NR-01 a NR-23)
+🚩 10. Red Flags Ativos (RF-01 a RF-14)
+✅ 11. Conclusão e Veredicto Final (com escalada aplicada)
 
 📄 Artefato 1 — Relatório TXT forense (winprobe-[KB]-[data].txt)
 📊 Artefato 2 — Diagrama Mermaid  (winprobe-[KB]-[data].mmd)
+```
+
+---
+
+## 📊 Exemplo de diagrama de saída (v1.0.0)
+
+```mermaid
+flowchart TD
+    CLAIM([🎯 Claim / KB ou título resumido]):::target
+    ORIGIN[🔗 Origem / portal + autor + data]
+    MSOURCE[🏛️ Fontes MS / Release Health + KB page]
+    MVPS[👥 MVPs / Baboo todos os canais + fabricantes]
+    PATTERNS[⚠️ Padrões / FN ativos inc. FN-09]
+    NOTRECOM[🚫 Não Recomendado / NR ativos]:::notrecom
+    REDFLAGS{{🚩 Red Flags / RF ativos inc. RF-13 e RF-14}}:::clean
+    SCOPE[📊 Escopo / caso isolado vs. global]
+    PROFILES[⚠️ Perfis / histórico alegações]:::profiles
+    LEAKEDDOC[📄 Doc. Vazado / autenticidade + fabricante]:::leakeddoc
+    VERDICT((✅ Veredicto / classificação + confiança)):::verdict
+
+    CLAIM --> ORIGIN
+    CLAIM --> MSOURCE
+    ORIGIN --> PATTERNS
+    ORIGIN --> PROFILES
+    ORIGIN --> LEAKEDDOC
+    MSOURCE --> REDFLAGS
+    MVPS --> REDFLAGS
+    MVPS --> NOTRECOM
+    PATTERNS --> SCOPE
+    PROFILES --> REDFLAGS
+    NOTRECOM --> REDFLAGS
+    LEAKEDDOC --> REDFLAGS
+    REDFLAGS --> VERDICT
+    SCOPE --> VERDICT
+
+    classDef target   fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
+    classDef verdict  fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
+    classDef clean    fill:#0d1f2d,color:#e0e0e0,stroke:#00b0ff
+    classDef profiles fill:#2b1a0d,color:#e0e0e0,stroke:#ff6d00
+    classDef notrecom fill:#1a0d2b,color:#e0e0e0,stroke:#aa00ff
+    classDef leakeddoc fill:#1a1a0d,color:#e0e0e0,stroke:#ffd600
+```
+
+---
+
+## 🔑 Prioridade de fontes
+
+```
+1. Microsoft Support (support.microsoft.com)
+2. Windows Release Health (learn.microsoft.com/windows/release-health)
+3. Microsoft Learn / Docs oficiais
+4. Microsoft Tech Community
+5. Sites oficiais de fabricantes de hardware (para claims sobre seus produtos)
+6. MVPs verificados (Microsoft Most Valuable Professionals)
+7. Especialistas independentes com histórico técnico comprovado
+8. Portais técnicos com rigor editorial (BleepingComputer, Ars Technica, TabNews)
+9. Portais generalistas de tecnologia
+10. Redes sociais / posts de usuários  ← baixa prioridade, alta desconfiança
+11. Documentos "vazados" não autenticados  ← inadmissíveis como evidência central
+```
+
+---
+
+## 🔐 Perguntas-chave do agente
+
+```
+ 1. A Microsoft listou oficialmente o problema no Windows Release Health?
+ 2. Quantos relatos independentes e verificáveis existem?
+ 3. O portal fez verificação própria ou apenas reproduziu outra fonte?
+ 4. Algum MVP se posicionou? Verificar TODOS os canais, incl. Instagram.
+ 5. O problema se aplica a todos os usuários ou configurações específicas?
+ 6. Linguagem condicional no corpo mas título como fato consumado?
+ 7. O problema já foi corrigido antes da publicação?
+ 8. A fonte primária é perfil com histórico de alegações não verificadas?
+ 9. A notícia promove prática da lista Não Recomendado (NR-01 a NR-23)?
+10. A notícia cita documento "vazado"? O fabricante confirmou?
+11. O fabricante do hardware mencionado emitiu comunicado oficial?
 ```
 
 ---
@@ -283,8 +355,6 @@ Abra o arquivo [`prompt.txt`](./prompt.txt) e copie o conteúdo completo.
 
 ### 2. Preencha os dados da notícia a investigar
 
-No topo do prompt, substitua os campos:
-
 ```
 Título ou resumo da notícia:              SUBSTITUIR
 URL(s) de origem conhecidas:              SUBSTITUIR
@@ -293,8 +363,6 @@ KB, build ou versão do Windows mencionada: SUBSTITUIR
 ```
 
 ### 3. Cole em qualquer LLM compatível
-
-O prompt foi testado e é compatível com:
 
 - [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
@@ -307,83 +375,6 @@ O prompt foi testado e é compatível com:
 > [!NOTE]
 > Recomenda-se a utilização dos modos *Expert* e *DeepThink*, bem como do raciocínio estendido das LLMs, a fim de produzir um relatório abrangente, consistente e de máxima precisão.
 
-### 4. Receba o relatório
-
-O agente executará a investigação e entregará o relatório completo com as 11 seções, a matriz de red flags, o arquivo `.txt` forense e o diagrama Mermaid.
-
----
-
-## 📊 Exemplo de diagrama de saída
-
-```mermaid
-flowchart TD
-    CLAIM([🎯 Claim / KB ou título resumido]):::target
-    ORIGIN[🔗 Origem / portal + autor + data]
-    MSOURCE[🏛️ Fontes MS / Release Health + KB page]
-    MVPS[👥 MVPs / Baboo + especialistas]
-    PATTERNS[⚠️ Padrões / FN ativos]
-    NOTRECOM[🚫 Não Recomendado / NR ativos]:::notrecom
-    REDFLAGS{{🚩 Red Flags / resumo RF ativos}}:::clean
-    SCOPE[📊 Escopo / caso isolado vs. global]
-    PROFILES[⚠️ Perfis / histórico alegações]:::profiles
-    VERDICT((✅ Veredicto / classificação + confiança)):::verdict
-
-    CLAIM --> ORIGIN
-    CLAIM --> MSOURCE
-    ORIGIN --> PATTERNS
-    ORIGIN --> PROFILES
-    MSOURCE --> REDFLAGS
-    MVPS --> REDFLAGS
-    MVPS --> NOTRECOM
-    PATTERNS --> SCOPE
-    PROFILES --> REDFLAGS
-    NOTRECOM --> REDFLAGS
-    REDFLAGS --> VERDICT
-    SCOPE --> VERDICT
-
-    classDef target   fill:#1a1a2e,color:#e0e0e0,stroke:#7b2fff
-    classDef verdict  fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
-    classDef clean    fill:#0d1f2d,color:#e0e0e0,stroke:#00b0ff
-    classDef profiles fill:#2b1a0d,color:#e0e0e0,stroke:#ff6d00
-    classDef notrecom fill:#1a0d2b,color:#e0e0e0,stroke:#aa00ff
-```
-
----
-
-## 🔑 Prioridade de fontes
-
-O agente segue uma hierarquia rígida de confiabilidade:
-
-```
-1. Microsoft Support (support.microsoft.com)
-2. Windows Release Health (learn.microsoft.com/windows/release-health)
-3. Microsoft Learn / Docs oficiais
-4. Microsoft Tech Community
-5. MVPs verificados (Microsoft Most Valuable Professionals)
-6. Especialistas independentes com histórico técnico comprovado
-7. Portais técnicos com rigor editorial (BleepingComputer, Ars Technica, TabNews)
-8. Portais generalistas de tecnologia
-9. Redes sociais / posts de usuários  ← baixa prioridade, alta desconfiança
-```
-
-> **Alucinação factual é falha grave.** O agente declara explicitamente "não encontrado após busca exaustiva" quando não há evidência verificável — nunca especula, nunca inventa.
-
----
-
-## 🔐 Perguntas-chave do agente
-
-O agente aplica sistematicamente estas 9 perguntas antes de emitir qualquer veredicto:
-
-1. A Microsoft listou oficialmente esse problema no Windows Release Health?
-2. Quantos relatos independentes e verificáveis existem?
-3. O portal fez verificação própria ou apenas reproduziu outra fonte?
-4. Algum MVP ou especialista técnico verificado se posicionou sobre o tema?
-5. O problema se aplica a todos os usuários ou apenas a configurações específicas?
-6. A notícia usa linguagem condicional mas o título afirma como fato consumado?
-7. O problema já foi corrigido pela Microsoft antes da publicação da notícia?
-8. A fonte primária é um perfil com histórico de alegações não verificadas?
-9. A notícia promove ou se baseia em prática da lista "Não Recomendado" (NR-01 a NR-23)?
-
 ---
 
 ## 📐 Parâmetros do agente
@@ -392,23 +383,28 @@ O agente aplica sistematicamente estas 9 perguntas antes de emitir qualquer vere
 |---|---|
 | Tom | Neutro · técnico · forense |
 | Ceticismo | Máximo — nunca aceita claim sem verificação oficial |
+| Canais MVP | TODOS obrigatórios: site, LinkedIn, Instagram, X, YouTube |
+| Documentos vazados | Inadmissíveis sem autenticação do emitente |
+| Fabricantes | Consultados obrigatoriamente quando mencionados |
 | Formatação de saída | Texto simples inline · emojis apenas em cabeçalhos |
 | Informação ausente | Declaração explícita obrigatória |
 | Veredicto possível | VERDADEIRO · PARCIALMENTE VERDADEIRO · SENSACIONALISTA · FAKE NEWS |
 | Nível de confiança | ALTO · MÉDIO · BAIXO |
+| Escalada de veredicto | RF-07 / RF-13 / RF-14 ativos disparam escalada obrigatória |
 
 ---
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Este projeto evolui com a comunidade. Se você aprimorou o prompt, adicionou uma entrada verificada na lista de perfis monitorados ou na lista de práticas não recomendadas, criou uma variante especializada ou encontrou um erro, compartilhe.
-
-O [`prompt.txt`](./prompt.txt) é o **modelo base** — sinta-se livre para modificá-lo, estendê-lo e adaptá-lo como desejar, respeitando os critérios de inclusão de perfis e as regras de evidência documentadas.
-
-Para adicionar novas entradas na lista de **Práticas Não Recomendadas** (NR-XX) é obrigatório:
+Contribuições são bem-vindas. Para adicionar novas entradas na lista de **Práticas Não Recomendadas** (NR-XX) é obrigatório:
 - URL do artigo ou orientação pública do MVP ou fonte técnica verificada
 - Descrição objetiva da prática e por que ela é incorreta
 - Data aproximada da publicação da fonte
+
+Para adicionar novos **Perfis Monitorados** é obrigatório:
+- URL do conteúdo original com o claim incorreto
+- URL do desmentido por MVP ou fonte oficial verificável
+- Data aproximada de ambos os registros
 
 ---
 

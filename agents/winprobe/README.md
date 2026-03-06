@@ -115,9 +115,10 @@ Ele cruza sistematicamente cada claim com fontes oficiais da Microsoft, posicion
 | 👥 Cruzamento com MVPs | Verificação do posicionamento de Baboo (Aurélio Minerbo) e outros especialistas |
 | 🔗 Rastreamento de origem | Identifica o relato primário e distingue caso isolado de problema global |
 | ⚠️ Padrões de desinformação | 8 padrões categorizados (FN-01 a FN-08) com critérios de identificação |
-| 🚩 Detecção de red flags | 11 categorias de alertas com severidade e evidência |
+| 🚩 Detecção de red flags | 12 categorias de alertas com severidade e evidência |
 | 🔎 Google Dorks sistematizados | Operadores avançados para verificação oficial, MVPs, escopo e portais |
 | ⚠️ Perfis monitorados | Lista de perfis com histórico de alegações não verificadas e desmentidas por MVPs |
+| 🚫 Práticas não recomendadas | 23 práticas desaconselhadas por MVP verificado com refutação técnica e fontes |
 | 🏷️ Classificação de portais | Níveis 1 a 4 de confiabilidade para cada fonte consultada |
 | 📊 Relatório estruturado | Saída em `.txt` forense + diagrama Mermaid exportável |
 
@@ -156,12 +157,49 @@ RF-08  Microsoft listou o problema como resolvido antes da publicação
 RF-09  Known Issue oficial descreve impacto menor do que o noticiado
 RF-10  Hardware ou configuração do relato era atípica ou não aplicável
 RF-11  Fonte primária é perfil com histórico de alegações não verificadas
+RF-12  Notícia promove prática desaconselhada por MVP verificado (NR-XX)
 ```
 
 Cada red flag é reportado no formato:
 ```
 [ID] [SEVERIDADE] [DATA APROX] [EVIDÊNCIA] [FONTE]
 ```
+
+---
+
+## 🚫 Práticas não recomendadas — baseadas nas orientações do MVP Aurélio Baboo
+
+O agente cruza cada claim investigado com um catálogo de **23 práticas tecnicamente incorretas, ineficazes ou perigosas** para o Windows, baseado nas orientações públicas do MVP Aurélio Minerbo (Baboo) em [baboo.com.br/desinformacao](https://www.baboo.com.br/desinformacao/), LinkedIn, Instagram, YouTube e fóruns.
+
+Se a notícia investigada promover ou se basear em alguma dessas práticas, o agente aciona automaticamente **RF-12 com severidade ALTA**.
+
+| ID | Prática desaconselhada | Fonte |
+|---|---|---|
+| NR-01 | Desativar Inicialização Rápida para "aumentar vida útil do PC" | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-inicializacao-rapida-nao-aumenta-a-vida-util-do-pc/) |
+| NR-02 | Chave de Registro para aumentar VRAM | [baboo.com.br](https://www.baboo.com.br/desinformacao/chave-do-registro-nao-aumenta-a-quantidade-de-vram/) |
+| NR-03 | Clonar PC sem Sysprep | [baboo.com.br](https://www.baboo.com.br/desinformacao/clonar-um-pc-sem-usar-sysprep-e-perigoso/) |
+| NR-04 | Liberar cache L2/L3 para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/pare-de-acreditar-no-mito-de-liberar-cache-l2-e-l3/) |
+| NR-05 | ReFS vai substituir NTFS em partições de boot | [baboo.com.br](https://www.baboo.com.br/desinformacao/refs-nao-substituira-particoes-ntfs/) |
+| NR-06 | Scripts de debloat para deixar o Windows mais rápido | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
+| NR-07 | Desativar serviços do Windows para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-servicos-nao-deixa-o-windows-mais-rapido/) |
+| NR-08 | Desativar o Windows Update | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-windows-update-indica-irresponsabilidade/) |
+| NR-09 | Desativar o UAC | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-uac-controle-de-conta-do-usuario-e-irresponsabilidade/) |
+| NR-10 | Programas de limpeza de Registro (CCleaner e similares) | [baboo.com.br](https://www.baboo.com.br/desinformacao/otimizar-limpar-o-registro-nao-deixa-o-windows-mais-rapido/) |
+| NR-11 | Programas de limpeza de memória RAM | [baboo.com.br](https://www.baboo.com.br/desinformacao/programa-que-limpa-a-memoria-ram-deve-ser-evitado/) |
+| NR-12 | Desativar a telemetria para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-telemetria-nao-deixa-o-windows-mais-rapido/) |
+| NR-13 | Desativar a Proteção do Sistema (pontos de restauração) | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-a-protecao-do-sistema-nao-deixa-o-windows-mais-rapido/) |
+| NR-14 | Desativar aplicativos nativos do Windows | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-aplicativos-do-windows-nao-afeta-desempenho-do-sistema-operacional/) |
+| NR-15 | Desativar hibernação para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/desabilitar-a-hibernacao-nao-deixa-o-windows-mais-rapido/) |
+| NR-16 | Desativar o WinSAT | [baboo.com.br](https://www.baboo.com.br/desinformacao/desativar-o-winsat-nao-deixa-o-windows-mais-rapido/) |
+| NR-17 | Opções Avançadas do MSCONFIG para melhorar desempenho | [baboo.com.br](https://www.baboo.com.br/desinformacao/opcoes-avancadas-do-msconfig-nao-melhoram-desempenho-do-windows/) |
+| NR-18 | Truque para usar 100% da velocidade da internet | [baboo.com.br](https://www.baboo.com.br/desinformacao/como-liberar-100-de-velocidade-da-sua-internet-e-pura-desinformacao/) |
+| NR-19 | Limpeza completa do Windows sem reinstalação | [baboo.com.br](https://www.baboo.com.br/desinformacao/nao-existe-limpeza-completa-no-windows/) |
+| NR-20 | Backup do Windows na mesma unidade | [baboo.com.br](https://www.baboo.com.br/desinformacao/nao-faca-backup-do-windows-na-mesma-unidade-de-disco/) |
+| NR-21 | Programas de instalação de drivers de terceiros | [baboo.com.br](https://www.baboo.com.br/desinformacao/programas-de-instalacao-de-drivers-devem-ser-evitados/) |
+| NR-22 | Comparativos de antivírus em sites não independentes | [baboo.com.br](https://www.baboo.com.br/ultimas/cuidado-com-artigos-e-analise-de-antivirus/) |
+| NR-23 | Exageros sobre bugs do Windows em portais de tecnologia | [baboo.com.br](https://www.baboo.com.br/desinformacao/desmistificando-exageros-sobre-bugs-do-windows/) |
+
+> Esta seção é baseada exclusivamente em orientações públicas verificáveis do MVP Aurélio Minerbo (Baboo). Cada entrada possui URL de referência. O catálogo pode ser expandido conforme novos artigos de desinformação forem publicados.
 
 ---
 
@@ -216,7 +254,7 @@ Sem esses três elementos, o perfil não deve ser incluído.
 
 ## 🗂️ Estrutura da resposta gerada
 
-O agente produz uma resposta em **10 seções obrigatórias** + **2 artefatos exportáveis**:
+O agente produz uma resposta em **11 seções obrigatórias** + **2 artefatos exportáveis**:
 
 ```
 🔍  1. Identificação da Notícia e Origem do Claim
@@ -227,8 +265,9 @@ O agente produz uma resposta em **10 seções obrigatórias** + **2 artefatos ex
 ⚖️  6. Análise de Claims e Inconsistências
 ☎️  7. Google Dorks Utilizados
 🕵️  8. Padrões de Desinformação Identificados
-🚩  9. Red Flags Ativos
-✅ 10. Conclusão e Veredicto Final
+🚫  9. Práticas Não Recomendadas Identificadas
+🚩 10. Red Flags Ativos
+✅ 11. Conclusão e Veredicto Final
 
 📄 Artefato 1 — Relatório TXT forense (winprobe-[KB]-[data].txt)
 📊 Artefato 2 — Diagrama Mermaid  (winprobe-[KB]-[data].mmd)
@@ -267,7 +306,7 @@ O prompt foi testado e é compatível com:
 
 ### 4. Receba o relatório
 
-O agente executará a investigação e entregará o relatório completo com as 10 seções, a matriz de red flags, o arquivo `.txt` forense e o diagrama Mermaid.
+O agente executará a investigação e entregará o relatório completo com as 11 seções, a matriz de red flags, o arquivo `.txt` forense e o diagrama Mermaid.
 
 ---
 
@@ -280,6 +319,7 @@ flowchart TD
     MSOURCE[🏛️ Fontes MS / Release Health + KB page]
     MVPS[👥 MVPs / Baboo + especialistas]
     PATTERNS[⚠️ Padrões / FN ativos]
+    NOTRECOM[🚫 Não Recomendado / NR ativos]:::notrecom
     REDFLAGS{{🚩 Red Flags / resumo RF ativos}}:::clean
     SCOPE[📊 Escopo / caso isolado vs. global]
     PROFILES[⚠️ Perfis / histórico alegações]:::profiles
@@ -291,8 +331,10 @@ flowchart TD
     ORIGIN --> PROFILES
     MSOURCE --> REDFLAGS
     MVPS --> REDFLAGS
+    MVPS --> NOTRECOM
     PATTERNS --> SCOPE
     PROFILES --> REDFLAGS
+    NOTRECOM --> REDFLAGS
     REDFLAGS --> VERDICT
     SCOPE --> VERDICT
 
@@ -300,6 +342,7 @@ flowchart TD
     classDef verdict  fill:#0d3b1e,color:#e0e0e0,stroke:#00c853
     classDef clean    fill:#0d1f2d,color:#e0e0e0,stroke:#00b0ff
     classDef profiles fill:#2b1a0d,color:#e0e0e0,stroke:#ff6d00
+    classDef notrecom fill:#1a0d2b,color:#e0e0e0,stroke:#aa00ff
 ```
 
 ---
@@ -326,7 +369,7 @@ O agente segue uma hierarquia rígida de confiabilidade:
 
 ## 🔐 Perguntas-chave do agente
 
-O agente aplica sistematicamente estas 8 perguntas antes de emitir qualquer veredicto:
+O agente aplica sistematicamente estas 9 perguntas antes de emitir qualquer veredicto:
 
 1. A Microsoft listou oficialmente esse problema no Windows Release Health?
 2. Quantos relatos independentes e verificáveis existem?
@@ -336,6 +379,7 @@ O agente aplica sistematicamente estas 8 perguntas antes de emitir qualquer vere
 6. A notícia usa linguagem condicional mas o título afirma como fato consumado?
 7. O problema já foi corrigido pela Microsoft antes da publicação da notícia?
 8. A fonte primária é um perfil com histórico de alegações não verificadas?
+9. A notícia promove ou se baseia em prática da lista "Não Recomendado" (NR-01 a NR-23)?
 
 ---
 
@@ -354,9 +398,14 @@ O agente aplica sistematicamente estas 8 perguntas antes de emitir qualquer vere
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Este projeto evolui com a comunidade. Se você aprimorou o prompt, adicionou uma entrada verificada na lista de perfis monitorados, criou uma variante especializada ou encontrou um erro, compartilhe.
+Contribuições são bem-vindas! Este projeto evolui com a comunidade. Se você aprimorou o prompt, adicionou uma entrada verificada na lista de perfis monitorados ou na lista de práticas não recomendadas, criou uma variante especializada ou encontrou um erro, compartilhe.
 
 O [`prompt.txt`](./prompt.txt) é o **modelo base** — sinta-se livre para modificá-lo, estendê-lo e adaptá-lo como desejar, respeitando os critérios de inclusão de perfis e as regras de evidência documentadas.
+
+Para adicionar novas entradas na lista de **Práticas Não Recomendadas** (NR-XX) é obrigatório:
+- URL do artigo ou orientação pública do MVP ou fonte técnica verificada
+- Descrição objetiva da prática e por que ela é incorreta
+- Data aproximada da publicação da fonte
 
 ---
 

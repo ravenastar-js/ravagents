@@ -154,9 +154,9 @@ Se precisar de ajuda ou quiser falar com a equipe, entre no nosso servidor de su
 
 <a href="https://www.star-history.com/?repos=ravenastar-js%2Fravagents&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=ravenastar-js/ravagents&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ravenastar-js/ravagents&type=date&theme=dark&legend=top-left&sealed_token=5IHpDTJS44QR3XfxeP425kNf_tWaOIElv1pX6cyYmxDMKiRxY_7vL6gVw5oqow7LU_3sexgWl8Iuycp1jpEN58aMCu05bCC1SpqGN0Sg7UvatZ-eBIsIbw" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ravenastar-js/ravagents&type=date&legend=top-left&sealed_token=5IHpDTJS44QR3XfxeP425kNf_tWaOIElv1pX6cyYmxDMKiRxY_7vL6gVw5oqow7LU_3sexgWl8Iuycp1jpEN58aMCu05bCC1SpqGN0Sg7UvatZ-eBIsIbw" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ravenastar-js/ravagents&type=date&legend=top-left&sealed_token=5IHpDTJS44QR3XfxeP425kNf_tWaOIElv1pX6cyYmxDMKiRxY_7vL6gVw5oqow7LU_3sexgWl8Iuycp1jpEN58aMCu05bCC1SpqGN0Sg7UvatZ-eBIsIbw" />
  </picture>
 </a>
 

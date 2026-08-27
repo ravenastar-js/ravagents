@@ -95,7 +95,7 @@
 # 🕵️ WinProbe — Agente Investigativo de Fake News Windows/Microsoft
 
 > **winprobe V1** · Agente investigativo especializado em desinformação técnica sobre Windows e produtos Microsoft  
-> Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
+> Compatível com: [SKYNETchat](https://skynetchat.net/r/78P3ZDLS) · ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
 ---
 
@@ -364,6 +364,7 @@ KB, build ou versão do Windows mencionada: SUBSTITUIR
 
 ### 3. Cole em qualquer LLM compatível
 
+- [SKYNETchat](https://skynetchat.net/r/78P3ZDLS)
 - [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
 - [ChatGPT](https://chat.openai.com)

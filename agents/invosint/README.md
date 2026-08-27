@@ -106,7 +106,7 @@
 
 > **invosint-v1** · Agente de inteligência de fontes abertas para investigação de perfis públicos brasileiros
 >
-> Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
+> Compatível com: [SKYNETchat](https://skynetchat.net/r/78P3ZDLS) · ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
 ---
 
@@ -265,6 +265,7 @@ Links conhecidos:             SUBSTITUIR
 
 O prompt foi testado e é compatível com:
 
+- [SKYNETchat](https://skynetchat.net/r/78P3ZDLS)
 - [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
 - [ChatGPT](https://chat.openai.com)

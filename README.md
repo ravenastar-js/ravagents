@@ -6,7 +6,7 @@
 # 🕵️ RavAgents
 
 > Coleção de agentes investigativos para LLMs — prompts estruturados para fact-checking, OSINT e combate à desinformação  
-> Compatível com: ChatGPT · Gemini · Grok · Claude · Copilot e afins
+> Compatível com: [SKYNETchat](https://skynetchat.net/r/78P3ZDLS) · ChatGPT · Gemini · Grok · Claude · Copilot e afins
 
 ---
 
@@ -78,6 +78,7 @@ Novos agentes serão adicionados progressivamente. Se você tem uma ideia de age
 
 **4. Cole em qualquer LLM compatível:**
 
+- [SKYNETchat](https://skynetchat.net/r/78P3ZDLS)
 - [Grok](https://grok.com/)
 - [Claude](https://claude.ai)
 - [ChatGPT](https://chat.openai.com)
